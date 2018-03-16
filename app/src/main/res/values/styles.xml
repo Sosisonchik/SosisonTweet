@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -17,11 +17,19 @@
     
     <style name="TextView.Primary">
         <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="TextView.Primary.Header">
+        <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextView.Secondary">
         <item name="android:textColor">#939393</item>
+    </style>
+
+    <style name="TextIcon" parent="TextView.Secondary">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/font_awasome</item>
     </style>
 
 </resources>

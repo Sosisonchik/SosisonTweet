@@ -18,7 +18,7 @@
     <TextView
         android:id="@+id/user_name_text_view"
         android:layout_marginTop="5dp"
-        style="@style/TextView.Primary"
+        style="@style/TextView.Primary.Header"
         android:text="Имя" />
 
     <TextView
@@ -33,11 +33,21 @@
         android:layout_height="wrap_content"
         android:text="Описание" />
 
-    <TextView
-        android:id="@+id/user_location_text_view"
-        style="@style/TextView.Secondary"
-        android:layout_marginTop="5dp"
-        android:text="Местоположение" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/user_location_icon"
+            style="@style/TextIcon"
+            android:text="@string/map_marker"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:id="@+id/user_location_text_view"
+            style="@style/TextView.Secondary"
+            android:layout_marginTop="5dp"
+            android:text="Местоположение" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -45,10 +55,23 @@
         android:orientation="horizontal">
 
         <TextView
+            style="@style/TextView.Primary"
+            android:id="@+id/following_count_text_view"
+            android:layout_marginRight="5dp"
+            android:text="5"
+            android:textStyle="bold"
+            />
+
+        <TextView
             android:id="@+id/following_text_view"
             style="@style/TextView.Secondary"
             android:layout_weight="1"
+            android:layout_marginRight="5dp"
             android:text="@string/following" />
+        <TextView
+            style="@style/TextView.Primary"
+            android:textStyle="bold"
+            android:text="123"/>
 
         <TextView
             android:id="@+id/followers_text_view"
