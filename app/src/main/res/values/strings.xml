@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SosisonTweet</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+</resources>
