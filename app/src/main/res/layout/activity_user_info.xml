@@ -72,8 +72,10 @@
             android:layout_marginRight="5dp"
             android:text="@string/following" />
         <TextView
+            android:id="@+id/followers_count_text_view"
             style="@style/TextView.Primary"
             android:textStyle="bold"
+            android:layout_marginRight="5dp"
             android:text="123"/>
 
         <TextView
@@ -81,6 +83,6 @@
             style="@style/TextView.Secondary"
             android:layout_weight="1"
             android:text="@string/followers"
-            android:layout_marginLeft="10dp" />
+             />
     </LinearLayout>
 </LinearLayout>
