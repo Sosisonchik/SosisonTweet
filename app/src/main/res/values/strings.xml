@@ -2,5 +2,5 @@
     <string name="app_name">SosisonTweet</string>
     <string name="following">Following</string>
     <string name="followers">Followers</string>
-    <string name="map_marker"></string>
+    <string name="map_marker">\uf041</string>
 </resources>

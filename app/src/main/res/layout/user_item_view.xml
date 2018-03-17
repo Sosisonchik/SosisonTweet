@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="65sp"
+        android:id="@+id/user_image_item"
+        android:layout_height="65sp"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/user_image_item"
+        android:layout_toRightOf="@+id/user_image_item"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView.Primary.Header"
+            android:layout_height="wrap_content"
+            android:text="Sosison"
+            android:layout_marginBottom="0dp"/>
+
+        <TextView
+            style="@style/TextView.Secondary"
+            android:text="sosisonchik"
+            android:layout_marginTop="0dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
