@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="65sp"
         android:id="@+id/user_image_item"
         android:layout_height="65sp"
+        android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher"
         />
 
@@ -21,12 +23,14 @@
 
         <TextView
             style="@style/TextView.Primary.Header"
+            android:id="@+id/user_name_search"
             android:layout_height="wrap_content"
             android:text="Sosison"
             android:layout_marginBottom="0dp"/>
 
         <TextView
             style="@style/TextView.Secondary"
+            android:id="@+id/user_nick_search"
             android:text="sosisonchik"
             android:layout_marginTop="0dp"/>
 

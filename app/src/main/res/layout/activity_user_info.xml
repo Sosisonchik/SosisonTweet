@@ -20,6 +20,7 @@
             android:id="@+id/user_image_view"
             android:layout_width="85sp"
             android:layout_height="85sp"
+            android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
 
         <TextView

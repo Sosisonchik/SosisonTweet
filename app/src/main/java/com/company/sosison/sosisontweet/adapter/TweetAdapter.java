@@ -31,6 +31,10 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.TweetViewHol
         notifyDataSetChanged();
     }
 
+    public void add(Tweet tweet){
+        tweetList.add(tweet);
+    }
+
     public void clearItems(){
         tweetList.clear();
         notifyDataSetChanged();
