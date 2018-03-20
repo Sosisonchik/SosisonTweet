@@ -7,13 +7,13 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_image_view_item"
-        android:layout_width="65sp"
-        android:layout_height="65sp"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
         android:src="@mipmap/ic_launcher"/>
     <TextView
         android:id="@+id/user_name_text_view_item"
         style="@style/TextView.Primary.Header"
-        android:textSize="19sp"
+        android:textSize="14sp"
         android:text="Sosison"
         android:layout_toEndOf="@+id/user_image_view_item"
         android:layout_marginLeft="8dp"
@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/user_nick_text_view_item"
         style="@style/TextView.Secondary"
-        android:textSize="16dp"
+        android:textSize="13dp"
         android:layout_alignBaseline="@+id/user_name_text_view_item"
         android:layout_marginLeft="5dp"
         android:layout_toEndOf="@+id/user_name_text_view_item"
@@ -32,7 +32,7 @@
         style="@style/TextView.Secondary"
         android:layout_toEndOf="@+id/user_nick_text_view_item"
         android:layout_alignBaseline="@+id/user_name_text_view_item"
-        android:textSize="16dp"
+        android:textSize="13dp"
         android:text="Авг.14"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/user_nick_text_view_item" />
@@ -40,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/message_text_view_item"
+        android:textSize="15sp"
         style="@style/TextDescriptionItem"
         android:text="Какой то текст, ведь мне надо проверить вид view"
         android:layout_below="@+id/user_name_text_view_item"
@@ -49,7 +50,7 @@
     <ImageView
         android:layout_width="311dp"
         android:id="@+id/image_post_item"
-        android:layout_height="175dp"
+        android:layout_height="165dp"
         android:layout_below="@+id/message_text_view_item"
         android:src="@mipmap/ic_launcher"
         android:layout_toEndOf="@+id/user_image_view_item"
@@ -76,9 +77,10 @@
             android:text="\uf079"/>
         <TextView
             android:layout_width="wrap_content"
+            android:id="@+id/retweets_count_item"
             android:layout_height="wrap_content"
             android:text="5"
-            android:textSize="22sp"
+            android:textSize="17sp"
             android:layout_weight="3"
             android:textColor="#666666"/>
 
@@ -89,10 +91,11 @@
             android:text="\uf004"/>
         <TextView
             android:layout_width="wrap_content"
+            android:id="@+id/likes_count_item"
             android:layout_height="wrap_content"
             android:text="0"
             android:textColor="#666666"
-            android:textSize="22sp"/>
+            android:textSize="17sp"/>
 
     </LinearLayout>
 

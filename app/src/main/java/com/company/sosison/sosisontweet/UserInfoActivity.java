@@ -2,11 +2,18 @@ package com.company.sosison.sosisontweet;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.company.sosison.sosisontweet.adapter.TweetAdapter;
+import com.company.sosison.sosisontweet.pojo.Tweet;
 import com.company.sosison.sosisontweet.pojo.User;
 import com.squareup.picasso.Picasso;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 public class UserInfoActivity extends AppCompatActivity {
     ImageView userImage_view;
@@ -16,6 +23,7 @@ public class UserInfoActivity extends AppCompatActivity {
     TextView location_view;
     TextView following_count_view;
     TextView followers_count_view;
+    private RecyclerView tweetsRycler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,5 +52,28 @@ public class UserInfoActivity extends AppCompatActivity {
         location_view.setText(user.getLocation());
         following_count_view.setText(String.valueOf(user.getFollowing_count()));
         followers_count_view.setText(String.valueOf(user.getFollowers_count()));
+        initRecycler();
+        TweetAdapter adapter = new TweetAdapter();
+        tweetsRycler.setAdapter(adapter);
+        adapter.setItems(getTweets());
+
+    }
+
+    private Collection<Tweet> getTweets() {
+        return Arrays.asList(
+                new Tweet(loadUser(), 1L, "Thu Dec 13 07:31:08 +0000 2017", "Очень длинное описание твита 1",
+                        4, 23, "https://www.w3schools.com/w3css/img_fjords.jpg"),
+
+                new Tweet(loadUser(), 2L, "Thu Dec 12 07:31:08 +0000 2017", "Очень длинное описание твита 2",
+                        5, 5, "https://www.w3schools.com/w3images/lights.jpg"),
+
+                new Tweet(loadUser(), 3L, "Thu Dec 11 07:31:08 +0000 2017", "Очень длинное описание твита 3",
+                        6, 6, "https://www.w3schools.com/css/img_mountains.jpg")
+        );
+    }
+
+    private void initRecycler() {
+        tweetsRycler = (RecyclerView)findViewById(R.id.tweets_recycler_view);
+        tweetsRycler.setLayoutManager(new LinearLayoutManager(this));
     }
 }
