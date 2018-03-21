@@ -1,11 +1,15 @@
 package com.company.sosison.sosisontweet;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.company.sosison.sosisontweet.adapter.TweetAdapter;
 import com.company.sosison.sosisontweet.pojo.Tweet;
@@ -24,6 +28,7 @@ public class UserInfoActivity extends AppCompatActivity {
     TextView following_count_view;
     TextView followers_count_view;
     private RecyclerView tweetsRycler;
+    android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +41,8 @@ public class UserInfoActivity extends AppCompatActivity {
         following_count_view = (TextView)findViewById(R.id.following_count_text_view);
         followers_count_view = (TextView)findViewById(R.id.followers_count_text_view);
         confirmInformation(loadUser());
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     private User loadUser(){
@@ -57,6 +64,21 @@ public class UserInfoActivity extends AppCompatActivity {
         tweetsRycler.setAdapter(adapter);
         adapter.setItems(getTweets());
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.search_btn){
+            Intent intent = new Intent(this,SearchUserActivity.class);
+            startActivity(intent);
+        }
+        return true;
     }
 
     private Collection<Tweet> getTweets() {

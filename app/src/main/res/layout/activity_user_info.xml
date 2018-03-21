@@ -6,6 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        ></android.support.v7.widget.Toolbar>
+    
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -18,8 +26,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_image_view"
-            android:layout_width="85sp"
-            android:layout_height="85sp"
+            android:layout_width="75sp"
+            android:layout_height="75sp"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
 
@@ -32,12 +40,13 @@
         <TextView
             android:id="@+id/user_nick_text_view"
             style="@style/TextView.Secondary"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:text="Ник" />
 
         <TextView
             android:id="@+id/user_description_text_view"
             style="@style/TextView.Primary"
+            android:layout_marginTop="3dp"
             android:layout_height="wrap_content"
             android:text="Описание" />
 
@@ -58,7 +67,7 @@
                 android:id="@+id/user_location_text_view"
                 style="@style/TextView.Secondary"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:text="Местоположение" />
         </LinearLayout>
 
