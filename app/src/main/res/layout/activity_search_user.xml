@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
+    android:orientation="vertical"
     tools:context="com.company.sosison.sosisontweet.SearchUserActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/search_toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search__text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/search_btn"
+                android:layout_toStartOf="@+id/search_btn"
+                android:background="@android:color/transparent"
+                android:hint="Введите имья"
+                android:imeOptions="actionSearch"
+                android:maxLines="1" />
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/font_awesome"
+                android:text="\uf002"
+                android:textSize="15dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
     <android.support.v7.widget.RecyclerView
+        android:padding="8dp"
         android:id="@+id/users_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
-</FrameLayout>
+</LinearLayout>
