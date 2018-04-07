@@ -50,7 +50,7 @@
     <ImageView
         android:layout_width="311dp"
         android:id="@+id/image_post_item"
-        android:layout_height="165dp"
+        android:layout_height="115dp"
         android:layout_below="@+id/message_text_view_item"
         android:src="@mipmap/ic_launcher"
         android:layout_toEndOf="@+id/user_image_view_item"
@@ -80,7 +80,7 @@
             android:id="@+id/retweets_count_item"
             android:layout_height="wrap_content"
             android:text="5"
-            android:textSize="17sp"
+            android:textSize="13sp"
             android:layout_weight="3"
             android:textColor="#666666"/>
 
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textColor="#666666"
-            android:textSize="17sp"/>
+            android:textSize="13sp"/>
 
     </LinearLayout>
 
